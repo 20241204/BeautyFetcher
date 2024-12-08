@@ -1,8 +1,13 @@
 # 禁止对 .gitattributes 文件进行行尾符转换
-.gitattributes -text
-# 在 .gitattributes 文件中设置行尾符为 LF 的文件
-*.py -text
-*.md -text
-LICENSE -text
-# 在 .gitattributes 文件中设置行尾符为 LF 的文件
-.github/workflows/*.yml -text
+.gitattributes text eol=lf
+
+# 禁用自动行尾符转换
+* -text
+
+# 对特定文件类型设置行尾符为 LF
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+LICENSE text eol=lf
